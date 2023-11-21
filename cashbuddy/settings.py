@@ -57,13 +57,13 @@ EMAIL_HOST_PASSWORD = 'By@maestAd2022!'
 # Application definition
 
 INSTALLED_APPS = [
-    
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles','rest_framework',
+    'django.contrib.staticfiles',
     # 'rest_framework.authtoken',
     'cashbuddy',
 ];
