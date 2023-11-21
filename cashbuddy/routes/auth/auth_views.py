@@ -3,15 +3,15 @@ from datetime import timezone
 from django.shortcuts import get_object_or_404
 from rest_framework import status
 from rest_framework.response import Response
-from rest_framework.decorators import api_view, permission_classes
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.decorators import api_view
+# from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
-from django_otp.plugins.otp_totp.models import TOTPDevice
+# from django_otp.plugins.otp_totp.models import TOTPDevice
 from rest_framework.exceptions import ValidationError
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from django.core.mail import send_mail
 from django.conf import settings
-import random
+# import random
 
 from ...models import CustomUser, PasswordResetCode
 from ...serializers import UserSerializer, OTPSerializer, SignUpSerializer

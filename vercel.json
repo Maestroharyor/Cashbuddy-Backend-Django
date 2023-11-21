@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "cashbuddy/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "cashbuddy/wsgi.py"
+    }
+  ]
+}

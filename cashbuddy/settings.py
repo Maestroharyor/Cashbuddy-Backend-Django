@@ -66,7 +66,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles','rest_framework',
     # 'rest_framework.authtoken',
     'cashbuddy',
-    'django_otp.plugins.otp_totp'
 ];
 
 MIDDLEWARE = [

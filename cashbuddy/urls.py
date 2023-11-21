@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from .views import welcome_to_cashbuddy
 
 urlpatterns = [
+    path('', welcome_to_cashbuddy),
     path('admin/', admin.site.urls),
     path('api/', include('cashbuddy.routes.routes_url')),
 ]
