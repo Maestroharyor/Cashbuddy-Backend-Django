@@ -106,14 +106,14 @@ REST_FRAMEWORK = {
         # 'rest_framework_simplejwt.authentication.TokenAuthentication',
     ],
     'DEFAULT_RENDERER_CLASSES': [
-
+        'rest_framework.renderers.JSONRenderer',
     ]
 }
 
-if DEBUG:
-    REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'].append('rest_framework.renderers.BrowsableAPIRenderer')
-else:
-    REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'].append('rest_framework.renderers.JSONRenderer')
+# if DEBUG:
+#     REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'].append('rest_framework.renderers.BrowsableAPIRenderer')
+# else:
+#     REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'].append('rest_framework.renderers.JSONRenderer')
 
 
 # Database
