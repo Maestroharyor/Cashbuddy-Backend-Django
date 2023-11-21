@@ -97,7 +97,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'cashbuddy.wsgi.application'
+WSGI_APPLICATION = 'cashbuddy.wsgi.app'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
