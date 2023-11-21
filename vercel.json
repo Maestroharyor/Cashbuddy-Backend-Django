@@ -1,14 +1,15 @@
 {
   "builds": [
     {
-      "src": "cashbuddy/wsgi.py",
-      "use": "@vercel/python"
+      "src": "vercel_app/wsgi.py",
+      "use": "@ardnt/vercel-python-wsgi",
+      "config": { "maxLambdaSize": "15mb" }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "cashbuddy/wsgi.py"
+      "dest": "vercel_app/wsgi.py"
     }
   ]
 }

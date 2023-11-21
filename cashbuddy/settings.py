@@ -32,7 +32,7 @@ PORT = 8010
 runserver.default_port = f"{PORT}"
 
 # Add the custom port to ALLOWED_HOSTS
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', f'127.0.0.1:{PORT}']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', f'127.0.0.1:{PORT}', '.vercel.app']
 
 AUTH_USER_MODEL = 'cashbuddy.CustomUser'  # Change this to your custom user model
 USER_ID_FIELD = 'user_id'  # Change this to the actual field in your user model
