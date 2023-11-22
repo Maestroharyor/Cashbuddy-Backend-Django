@@ -24,7 +24,7 @@ urlpatterns = [
     path('', welcome_to_cashbuddy),
     path('admin/', admin.site.urls),
     path('api/', include('cashbuddy.routes.routes_url')),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # if settings.DEBUG:
 #     urlpatterns = urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
