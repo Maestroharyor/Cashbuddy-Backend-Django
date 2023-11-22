@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 from django.core.management.commands.runserver import Command as runserver
 
@@ -120,10 +120,63 @@ REST_FRAMEWORK = {
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
+    #    'default': {
+    #     # 'ENGINE': 'bigleg-ray-12728.7tt.cockroachlabs.cloud',
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'CashBuddy', 
+    #     'USER': 'maestro', 
+    #     'PASSWORD': 'y8GQNeWHS6m6J4B70JfAHQ',
+    #     'HOST': 'bigleg-ray-12728.7tt.cockroachlabs.cloud', 
+    #     'PORT': 26257,
+    # }
+
+    # 'default': {
+    #     'ENGINE': 'djongo',
+    #     'NAME': 'cashbuddy',
+    #     'ENFORCE_SCHEMA': False,  # Set to True if you want to enforce a schema
+    #     'CLIENT': {
+    #         'host': 'your_mongodb_host',
+    #         'port': 27017,
+    #         'username': 'your_mongodb_username',
+    #         'password': 'your_mongodb_password',
+    #         'authSource': 'your_authentication_database',
+    #         # You can add more MongoDB connection options as needed
+    #     }
+    # }
+
+    # 'default': {
+    # 'ENGINE': 'django.db.backends.mysql',
+    # 'NAME': 'cashbuddy',
+    # 'HOST': 'aws.connect.psdb.cloud',
+    # 'USER': 'i9ulk9roq4zi6sogwktv',
+    # 'PASSWORD': 'pscale_pw_kRszXoI58i0qzHTb9swcjZvNEI2WkNoleSMDshD974O',
+    # 'PORT': '3306',
+    # 'OPTIONS': {
+    #     'ssl': {
+    #         'ca': '/etc/ssl/cert.pem'
+    #     }
+    # }
+    # 'NAME': os.environ.get('DB_NAME'),
+    # 'HOST': os.environ.get('DB_HOST'),
+    # 'PORT': os.environ.get('DB_PORT'),
+    # 'USER': os.environ.get('DB_USER'),
+    # 'PASSWORD': os.environ.get('DB_PASSWORD'),
+    # 'OPTIONS': {'ssl': {'ca': os.environ.get('MYSQL_ATTR_SSL_CA')}}
+#   }
+
+'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'CashBuddy',
+    'USER': 'Maestroharyor',
+    'PASSWORD': '0lgu1GqPyVif',
+    'HOST': 'ep-steep-cherry-68003624.us-east-2.aws.neon.tech',
+    'PORT': '5432',
+    'OPTIONS': {'sslmode': 'require'},
+  }
 }
 
 
