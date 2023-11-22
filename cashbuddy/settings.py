@@ -22,7 +22,11 @@ CSP_IMG_SRC = ("'self'")
 
 CSP_STYLE_SRC = ("'self'")
 
+CSP_DEFAULT_SRC = ("'self'")
+
 CSP_SCRIPT_SRC = ("'self'")
+
+CSP_SCRIPT_SRC_ATTR = ("'self'")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
