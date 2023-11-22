@@ -10,8 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
+from dotenv import load_dotenv
 from pathlib import Path
 from django.core.management.commands.runserver import Command as runserver
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,7 +27,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-6be8dekx7c_0tpll2+gh#9-dpsl-%i(1glw%n2a%90oe&^3(3t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG')
+print("Test: ",os.environ.get('DEBUG'))
 
 # Define a custom port
 PORT = 8010
@@ -169,12 +173,12 @@ DATABASES = {
 #   }
 
 'default': {
-    'ENGINE': 'django.db.backends.postgresql',
-    'NAME': 'CashBuddy',
-    'USER': 'Maestroharyor',
-    'PASSWORD': '0lgu1GqPyVif',
-    'HOST': 'ep-steep-cherry-68003624.us-east-2.aws.neon.tech',
-    'PORT': '5432',
+    'ENGINE': os.environ.get('DB_ENGINE'),
+    'NAME': os.environ.get('CashBuddy'),
+    'USER': os.environ.get('Maestroharyor'),
+    'PASSWORD': os.environ.get('0lgu1GqPyVif'),
+    'HOST': os.environ.get('ep-steep-cherry-68003624.us-east-2.aws.neon.tech'),
+    'PORT': os.environ.get('5432'),
     'OPTIONS': {'sslmode': 'require'},
   }
 }
