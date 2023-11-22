@@ -16,6 +16,14 @@ from django.core.management.commands.runserver import Command as runserver
 
 load_dotenv()
 
+# Content Security Policy
+
+CSP_IMG_SRC = ("'self'")
+
+CSP_STYLE_SRC = ("'self'")
+
+CSP_SCRIPT_SRC = ("'self'")
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
