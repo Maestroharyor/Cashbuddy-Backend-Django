@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls.static import static
-# from django.conf import settings
+from django.conf import settings
 from django.urls import include, path
 from .views import welcome_to_cashbuddy
 
@@ -24,7 +24,7 @@ urlpatterns = [
     path('', welcome_to_cashbuddy),
     path('admin/', admin.site.urls),
     path('api/', include('cashbuddy.routes.routes_url')),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 # if settings.DEBUG:
 #     urlpatterns = urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
