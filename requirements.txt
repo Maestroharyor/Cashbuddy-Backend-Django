@@ -3,4 +3,5 @@ djangorestframework-simplejwt==5.3.0
 psycopg[3.2.0]
 psycopg2-binary
 python-dotenv
+django-csp
 Django==4.2.7
