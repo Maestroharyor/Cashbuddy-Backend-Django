@@ -28,6 +28,8 @@ CSP_SCRIPT_SRC = ("'self'")
 
 CSP_SCRIPT_SRC_ATTR = ("'self'")
 
+CSP_BLOCK_ALL_MIXED_CONTENT = ("'self'")
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
